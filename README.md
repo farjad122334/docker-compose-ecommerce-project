@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Organica - Full Stack E-commerce Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Organica is a full-stack e-commerce project built using Spring Boot, MySQL, and React.js. It handles various operations on the server side, such as managing the shopping cart and other functionalities. For security, it utilizes JWT authentication and authorization using Spring Security.
 
-## Available Scripts
+<a href="https://hits.sh/github.com/vivekkakadiya/Organica"><img alt="Hits" src="https://hits.sh/github.com/vivekkakadiya/Organica.svg?label=Viewer%20Count&color=355C7D&labelColor=4083e9"/></a>
+## Tech Stack
 
-In the project directory, you can run:
+- Backend Framework: Spring Boot
+- Frontend Framework: React.js
+- Database: MySQL
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this project locally, you need to have the following software installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- JDK 17
+- Node.js
+- MySQL Server
+- Git
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- User authentication and authorization using JWT
+- Product browsing and searching
+- Shopping cart management
+- Order placement and tracking
+- Razorpay Payment integration
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```shell
+   git clone https://github.com/your-username/organica.git
+   cd organica
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Set up the database:
 
-### `npm run eject`
+   - Create a MySQL database and configure the connection details in `backend/src/main/resources/application.properties` file. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Application Properties
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   To configure the application properties, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   - Open the `backend/src/main/resources/application.properties` file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   - Configure the MySQL database connection properties by updating the following lines:
 
-## Learn More
+     ```
+     spring.datasource.url=jdbc:mysql://localhost:3306/organica
+     spring.datasource.username=your-username
+     spring.datasource.password=your-password
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+     Replace `your-username` and `your-password` with your MySQL database credentials.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
+   - (Optional) If you want to change the server port, update the following line:
 
-### Code Splitting
+     ```
+     server.port=8080
+     ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+     Replace `8080` with the desired port number.
 
-### Analyzing the Bundle Size
+   - Save the `application.properties` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Backend Setup:
 
-### Making a Progressive Web App
+   - Navigate to the `Server` directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+     ```shell
+     cd server
+     ```
 
-### Advanced Configuration
+   - Build and run the Spring Boot application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+     ```shell
+     ./mvnw spring-boot:run
+     ```
 
-### Deployment
+   The backend server should now be running on `http://localhost:8080`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5. Frontend Setup:
 
-### `npm run build` fails to minify
+   - Navigate to the `Client` directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     ```shell
+     cd Client
+     ```
+
+   - Install the dependencies:
+
+     ```shell
+     npm install
+     ```
+
+   - Start the React development server:
+
+     ```shell
+     npm start
+     ```
+
+   The frontend server should now be running on `http://localhost:3000`.
+
+6. Open your web browser and visit `http://localhost:3000` to access the Organica application.
+
+
+## Contributing
+
+Contributions are welcome! If you want to contribute to Organica, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature/bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main repository.
+
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact the project maintainers:
+
+- Vivek Kakadiya - vivek.kakadiya111@gmail.com
+
+
