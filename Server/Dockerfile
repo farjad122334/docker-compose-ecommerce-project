@@ -7,8 +7,6 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-# Build the project (generate .jar)
-RUN mvn clean package -DskipTests
 
 # -------- Stage 2: Run --------
 FROM eclipse-temurin:17-jdk
@@ -19,7 +17,7 @@ WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
 # Expose default Spring Boot port
-EXPOSE 8080
+EXPOSE 8000
 
 # Run the Spring Boot app
 ENTRYPOINT ["java", "-jar", "app.jar"]
