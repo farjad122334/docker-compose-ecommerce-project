@@ -6,7 +6,7 @@ WORKDIR /app
 # Copy Maven files first for better layer caching
 COPY pom.xml .
 COPY src ./src
-
+RUN mvn clean package -DskipTests
 
 # -------- Stage 2: Run --------
 FROM eclipse-temurin:17-jdk
