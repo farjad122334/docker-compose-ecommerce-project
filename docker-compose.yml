@@ -23,6 +23,8 @@ services:
     depends_on:
       - db
     environment:
+      RAZORPAY_KEY: rzp_test_123456789012
+      RAZORPAY_SECRET: abcdefghijklmnopqrstuvwx
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/organica
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
