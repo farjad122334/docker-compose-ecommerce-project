@@ -7,7 +7,7 @@ services:
     restart: always
     networks:
       - app-net
-    environment: 
+    environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: organica
       MYSQL_USER: user
@@ -23,9 +23,9 @@ services:
     depends_on:
       - db
     environment:
-      RAZORPAY_KEY: rzp_test_123456789012
-      RAZORPAY_SECRET: abcdefghijklmnopqrstuvwx
-      SPRING_DATASOURCE_URL: jdbc:mysql:/db:3306/organica
+      razorpay.key_id: rzp_test_123456789012
+      razorpay.key_secret: abcdefghijklmnopqrstuvwx
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/organica
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
     networks:
