@@ -1,4 +1,7 @@
 import axios from "axios";
+
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const axiosFetch = async ({ url, method, data = null }) => {
   //api to fetch data from postman mock server
   try {
@@ -8,7 +11,7 @@ const axiosFetch = async ({ url, method, data = null }) => {
     const token = sessionStorage.getItem("token") ?? "{}";
     console.log(token);
     const response = await axios.request({
-      url: "http://localhost:9090/" + url,
+      url: `${apiUrl}` + url,
       method,
       data: data,
       headers: {

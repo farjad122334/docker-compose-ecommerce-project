@@ -4,6 +4,8 @@ import { Footer } from '../Component/Footer'
 import { Header } from '../Component/Header'
 import { toast } from 'react-toastify';
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 export const Login = () => {
   const navigate = useNavigate();
   const onToast = (s) => {
@@ -41,7 +43,7 @@ export const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:9090/auth/singin", {
+    const res = await fetch(`${apiUrl}/auth/singin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
